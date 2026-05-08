@@ -1,54 +1,36 @@
-# Orbit
-> This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/). 
-> Visit her [website](http://themes.3rdwavemedia.com/) for more themes.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-I have made this into a Jekyll Theme. Checkout the live demo [here](http://webjeda.com/online-cv/).
+## Getting Started
 
-<table>
-  <tr>
-    <th>Desktop</th>
-    <th>Mobile</th>
-  </tr>
-  <tr>
-    <td>
-        <img src="/assets/images/desktop.png?raw=true" width="600"/>
-    </td>
-    <td>
-        <img src="/assets/images/mobile.png?raw=true" width="250"/>
-    </td>
-  </tr>
-</table>
+First, run the development server:
 
-## Installation
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-* [Fork](https://github.com/sharu725/online-cv/fork) the repository
-* Go to settings and set Github Pages source as master.
-* Your new site should be ready at `https://username.github.io/online-cv/`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Change all the details from one place: ``_data/data.yml``
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Watch my [video](https://www.youtube.com/embed/T2nx6tj-ZH4) on installation.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Skins
+## Learn More
 
-There are 6 color schemes available:
+To learn more about Next.js, take a look at the following resources:
 
-| Blue | Turquoise | Green |
-|---------|---------|---------|
-| <img src="/assets/images/blue.jpg" width="300"/> | <img src="/assets/images/turquoise.jpg" width="300"/> | <img src="/assets/images/green.jpg" width="300"/> |
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-| Berry | Orange | Ceramic |
-|---------|---------|---------|
-| <img src="/assets/images/berry.jpg" width="300"/> | <img src="/assets/images/orange.jpg" width="300"/> | <img src="/assets/images/ceramic.jpg" width="300"/> |
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Credits
+## Deploy on Vercel
 
-Thanks to [Nelson Estevão](https://github.com/nelsonmestevao) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=nelsonmestevao).
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Thanks to [t-h-e(sfrost)](https://github.com/t-h-e) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=t-h-e).
-
-Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
-
-## License
-
-This project is licensed under the [MIT license](LICENSE.txt).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
