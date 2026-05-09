@@ -37,8 +37,27 @@ const EXPERIENCE = [
           "Helped ensure new-market card launches fit into Wise's global card platform rather than becoming one-off implementations",
         ],
       },
+      {
+        title: "Product Growth",
+        bullets: [
+          "Supported engineers leading Auto Top-up, a product initiative to improve the first customer experience and reduce friction when customers start using Wise cards — live in Singapore and Great Britain",
+          "Supported engineers leading Bill Split, a product initiative aimed at increasing card adoption and card spend by creating more everyday reasons to use Wise cards",
+          "Helped engineers shape technical direction, unblock delivery, navigate stakeholders, and ship with confidence",
+          "Partnered with product and analytics to understand adoption drivers, define team KPIs, and align engineering priorities with measurable customer and business outcomes",
+        ],
+      },
+      {
+        title: "Engineering Leadership",
+        bullets: [
+          "Grew engineers by coaching them through technical ownership, RFC writing, stakeholder alignment, global approvals, and promotion growth",
+          "Created space for engineers to lead complex initiatives themselves, while providing the structure, review, and stakeholder support needed to ship successfully",
+          "Built a team culture where engineers are expected to contribute to technical direction, not just execute decisions made by leadership",
+          "Worked with engineers to turn ground-level system knowledge into clear proposals, RFCs, and prioritised improvements",
+          "Represented the team's technical direction to leadership, maintaining accountability across delivery, compliance, reliability, and product outcomes",
+        ],
+      },
     ],
-    tags: ["Engineering Leadership", "Cards", "PCI Compliance", "Market Expansion", "Incident Management"],
+    tags: ["Engineering Leadership", "Cards", "PCI Compliance", "Market Expansion", "Product Growth"],
   },
   {
     role: "Software Engineer II",
