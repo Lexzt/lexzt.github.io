@@ -103,15 +103,15 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
-    title: "Bravos Research Investment Tracker",
-    description: "Full-stack investment tracking pipeline with paper trading, dashboard UI, and approval-gated order workflow. 20+ Python scripts covering ingestion → reconciliation → action queue → research briefs → performance → dashboard. Dual paper/live mode with kill switch, double approval, and daily spend guardrails.",
+    title: "SignalForge",
+    description: "Signal aggregation platform for investment research — currently ingests Bravos Research trade alerts and supports paper trading via IBKR. Pipeline scripts handle market price refreshes, position reconciliation, action queue generation, and TP proximity monitoring. Dashboard with order basket view, P&L charting, and alert timeline served over Tailscale. Built with guardrails: dual paper/live mode, kill switch, double approval, and 42 automated guardrail tests.",
     stack: ["Python", "React", "Next.js", "SQLite", "IBKR API", "Tailwind CSS"],
     status: "Active — 18 tracked tickers, 7 paper positions, 42 automated tests",
-    link: "https://github.com/Lexzt/bravos-tracker",
+    link: "https://github.com/Lexzt/signal-forge",
   },
   {
     title: "Personal AI Assistant (OpenClaw)",
-    description: "AI personal assistant running on a Mac mini, managing Gmail, calendar, investment alerts, and daily briefings via Telegram. Automated cron workflows for Bravos trade alerts, market-hour position syncing, and TP proximity monitoring. Built with guardrails: read-only first, approval-gated actions, no external writes without explicit consent.",
+    description: "AI personal assistant running on a Mac mini, managing Gmail, calendar, investment alerts, and daily briefings via Telegram. Automated cron workflows for SignalForge trade alerts, market-hour position syncing, and TP proximity monitoring. Built with guardrails: read-only first, approval-gated actions, no external writes without explicit consent.",
     stack: ["OpenClaw", "TypeScript", "Python", "Telegram Bot API", "Tailscale"],
     status: "Running 24/7 — managing investment pipeline, email, and calendar",
     link: null,
