@@ -132,10 +132,10 @@ const PROJECTS = [
     link: null,
   },
   {
-    title: "Homelab Infrastructure",
-    description: "Unraid NAS server (~60TB) running Emby, PhotoPrism, qBittorrent, Radarr/Sonarr with Docker networking. Connected via Tailscale tailnet for remote access. Designed for power-efficiency — doesn't run 24/7. Working on always-on Tailscale subnet router + JetKVM for remote power management.",
-    stack: ["Unraid", "Docker", "Tailscale", "UniFi", "JetKVM"],
-    status: "Operational — remote access improvements in progress",
+    title: "Homelab",
+    description: "A long-term personal infrastructure project focused on data ownership, self-hosting, networking, and smart home experimentation. Built around Unraid, Docker, Ubiquiti networking, private access through Tailscale, and 10GbE local networking, the homelab runs private services for media management, photo backup, remote access, and home infrastructure. It also acts as a real-world learning environment for server hardware, storage design, PCIe planning, reverse proxying, monitoring, and incident-style troubleshooting.",
+    stack: ["Unraid", "Docker", "Ubiquiti", "Tailscale", "10GbE", "Self-hosting", "Data Ownership"],
+    status: "Active — Unraid NAS (~60TB), Ubiquiti networking, Tailscale remote access",
     link: null,
   },
 ];
