@@ -3,17 +3,42 @@ import Link from "next/link";
 const EXPERIENCE = [
   {
     role: "Engineering Lead",
-    team: "Spend Adoption",
+    team: "Cards / Spend Adoption",
     company: "Wise",
     period: "Oct 2023 → Present",
     location: "Singapore",
-    highlights: [
-      "Lead a cross-functional team of 6 engineers building card adoption products — owning backend systems, product strategy, compliance requirements, and execution",
-      "Drove card activation rate improvements through data-driven experimentation, directly impacting millions of Wise debit card holders globally",
-      "Navigated complex regulatory and compliance constraints across multiple markets (SG, EU, UK, US, AU, JP) to ship card products on schedule",
-      "Aligned engineering roadmap with product and commercial goals — translating business requirements into technical architecture and team-level execution plans",
+    summary: "I lead engineering for Wise's card adoption and early customer experience domain. My team owns systems across card ordering, card availability, manufacturing integrations, PCI-sensitive card data handling, market expansion, and product growth initiatives for both consumer and business customers.",
+    areas: [
+      {
+        title: "Global Card Platform",
+        bullets: [
+          "Led engineering across card ordering, availability, and fulfilment systems — helping Wise scale card issuance globally",
+          "Supported manufacturing integrations between Wise systems and external card production and fulfilment partners",
+          "Built and maintained back-office tooling for monitoring, supporting, and resolving card ordering, manufacturing, and availability issues",
+          "Improved operational visibility through alerting and monitoring, helping teams detect failures earlier",
+          "Supported incident management for card systems, ensuring clear ownership, accountability, communication, and recovery",
+        ],
+      },
+      {
+        title: "Regulated Card Systems",
+        bullets: [
+          "Owned PCI-sensitive card systems, including encryption and decryption flows for sensitive card data",
+          "Supported multiple yearly PCI and compliance audit cycles",
+          "Helped design a scalable approach for India's data-regulated card environment, balancing local data requirements with Wise's global card platform",
+          "Worked with compliance, product, and engineering stakeholders to make regulated data handling explicit, auditable, and supportable",
+        ],
+      },
+      {
+        title: "Market Expansion",
+        bullets: [
+          "Supported card launches and expansion across the US, India, Brazil, Malaysia, and other markets",
+          "Adapted team-owned services for country-specific card availability, manufacturing readiness, compliance needs, and operational support",
+          "Supported growth across both consumer and business card customers",
+          "Helped ensure new-market card launches fit into Wise's global card platform rather than becoming one-off implementations",
+        ],
+      },
     ],
-    tags: ["Engineering Leadership", "Cards", "Product Strategy", "Compliance", "Team Growth"],
+    tags: ["Engineering Leadership", "Cards", "PCI Compliance", "Market Expansion", "Incident Management"],
   },
   {
     role: "Software Engineer II",
@@ -255,13 +280,13 @@ function Experience() {
   return (
     <section id="experience" className="py-24 max-w-4xl mx-auto px-6">
       <h2 className="font-mono text-sm text-[var(--color-accent)] tracking-wider mb-12">// experience</h2>
-      <div className="space-y-2">
+      <div className="space-y-6">
         {EXPERIENCE.map((exp, i) => (
           <div
             key={i}
             className="group p-6 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-lg card-hover"
           >
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
               <div>
                 <h3 className="text-lg font-semibold text-[var(--color-text)]">
                   {exp.role}
@@ -276,13 +301,41 @@ function Experience() {
                 <p className="font-mono text-xs text-[var(--color-text-muted)]">{exp.location}</p>
               </div>
             </div>
-            <ul className="space-y-1 mb-3">
-              {exp.highlights.map((h, j) => (
-                <li key={j} className="text-sm text-[var(--color-text-muted)] pl-4 border-l-2 border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
-                  {h}
-                </li>
-              ))}
-            </ul>
+
+            {/* Summary for lead role */}
+            {exp.summary && (
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4">{exp.summary}</p>
+            )}
+
+            {/* Key areas with sub-bullets */}
+            {exp.areas && (
+              <div className="space-y-4 mb-4">
+                {exp.areas.map((area) => (
+                  <div key={area.title}>
+                    <h4 className="font-mono text-xs text-[var(--color-accent-secondary)] tracking-wider mb-2">{area.title}</h4>
+                    <ul className="space-y-1.5">
+                      {area.bullets.map((b, j) => (
+                        <li key={j} className="text-sm text-[var(--color-text-muted)] pl-4 border-l-2 border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Simple highlights for non-lead roles */}
+            {exp.highlights && (
+              <ul className="space-y-1.5 mb-4">
+                {exp.highlights.map((h, j) => (
+                  <li key={j} className="text-sm text-[var(--color-text-muted)] pl-4 border-l-2 border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            )}
+
             <div className="flex flex-wrap gap-2">
               {exp.tags.map((tag) => (
                 <span
