@@ -118,20 +118,6 @@ const PROJECTS = [
     link: "https://github.com/Lexzt/signal-forge",
   },
   {
-    title: "Personal AI Assistant (OpenClaw)",
-    description: "AI personal assistant running on a Mac mini, managing Gmail, calendar, investment alerts, and daily briefings via Telegram. Automated cron workflows for SignalForge trade alerts, market-hour position syncing, and TP proximity monitoring. Built with guardrails: read-only first, approval-gated actions, no external writes without explicit consent.",
-    stack: ["OpenClaw", "TypeScript", "Python", "Telegram Bot API", "Tailscale"],
-    status: "Running 24/7 — managing investment pipeline, email, and calendar",
-    link: null,
-  },
-  {
-    title: "Friend Scheduling App (TableTime)",
-    description: "Group coordination app for friends to agree on dinner dates without the classic 'when are you free?' back-and-forth. Designed around group chat integration — because that's where the actual conversation happens. PRD complete, implementation paused while on sabbatical.",
-    stack: ["Next.js", "Tailwind CSS", "React"],
-    status: "PRD complete — building after honeymoon",
-    link: null,
-  },
-  {
     title: "Homelab",
     description: "A long-term personal infrastructure project focused on data ownership, self-hosting, networking, and smart home experimentation. Built around Unraid, Docker, Ubiquiti networking, private access through Tailscale, and 10GbE local networking, the homelab runs private services for media management, photo backup, remote access, and home infrastructure. It also acts as a real-world learning environment for server hardware, storage design, PCIe planning, reverse proxying, monitoring, and incident-style troubleshooting.",
     stack: ["Unraid", "Docker", "Ubiquiti", "Tailscale", "10GbE", "Self-hosting", "Data Ownership"],
@@ -461,8 +447,7 @@ function Skills() {
           <div className="mt-6 p-4 bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-lg">
             <p className="font-mono text-xs text-[var(--color-accent-secondary)] mb-1">currently_building</p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-1">
-              <li>🤖 AI personal assistant (OpenClaw + agents)</li>
-              <li>📈 Investment tracker with paper trading</li>
+              <li>📈 SignalForge — investment research and paper trading</li>
               <li>🖥️ Homelab remote access setup</li>
               <li>🌐 This website (obviously)</li>
             </ul>
