@@ -8,10 +8,12 @@ const EXPERIENCE = [
     period: "Oct 2023 → Present",
     location: "Singapore",
     highlights: [
-      "Leading the Spend Adoption team — building customer-facing products to drive card adoption",
-      "Own backend systems, product strategy, compliance, and team execution across cards/spend",
+      "Lead a cross-functional team of 6 engineers building card adoption products — owning backend systems, product strategy, compliance requirements, and execution",
+      "Drove card activation rate improvements through data-driven experimentation, directly impacting millions of Wise debit card holders globally",
+      "Navigated complex regulatory and compliance constraints across multiple markets (SG, EU, UK, US, AU, JP) to ship card products on schedule",
+      "Aligned engineering roadmap with product and commercial goals — translating business requirements into technical architecture and team-level execution plans",
     ],
-    tags: ["Leadership", "Cards", "Product Strategy"],
+    tags: ["Engineering Leadership", "Cards", "Product Strategy", "Compliance", "Team Growth"],
   },
   {
     role: "Software Engineer II",
@@ -20,9 +22,12 @@ const EXPERIENCE = [
     period: "Oct 2022 → Oct 2023",
     location: "Singapore",
     highlights: [
-      "Core engineer on Spend Issuance — shipping card issuance infrastructure at scale",
+      "Core engineer on card issuance infrastructure — systems that provision and lifecycle-manage debit cards across Wise's global card programmes",
+      "Built issuance flows for new market expansions, handling regulatory requirements and card network integrations (Mastercard, Visa)",
+      "Reduced card issuance failure rates by diagnosing and fixing edge cases across the card lifecycle pipeline",
+      "Operated high-throughput backend services with on-call rotation, incident response, and post-mortem culture",
     ],
-    tags: ["Backend", "Cards Infrastructure"],
+    tags: ["Backend", "Cards Infrastructure", "Payments", "On-call"],
   },
   {
     role: "Software Engineer",
@@ -31,9 +36,11 @@ const EXPERIENCE = [
     period: "Jun 2021 → Oct 2022",
     location: "Singapore",
     highlights: [
-      "Built and scaled Spend Issuance systems from early days",
+      "Early engineer on Spend Issuance — helped build and scale the card issuance platform from greenfield to production",
+      "Shipped core card lifecycle features: issuance, activation, pin management, and card controls used by millions of customers",
+      "Worked across the stack (Kotlin, Java, Terraform) with exposure to payment processing, card network APIs, and infrastructure-as-code",
     ],
-    tags: ["Full-Stack", "Payments"],
+    tags: ["Full-Stack", "Payments", "Kotlin", "Terraform"],
   },
   {
     role: "Software Engineer Intern",
@@ -41,9 +48,9 @@ const EXPERIENCE = [
     period: "May 2020 → Jul 2020",
     location: "Singapore",
     highlights: [
-      "Built a Dockerized form submission platform handling 100+ form types",
-      "Integrated Camunda workflow engine for automated verification",
-      "Wrote test suites and CI pipelines with git hooks",
+      "Built a Dockerized form submission platform handling 100+ form types for government digital services",
+      "Integrated Camunda workflow engine for automated form verification and routing",
+      "Wrote test suites and CI pipelines with git hooks — shipped to production during the internship",
     ],
     tags: ["Docker", "Workflow Automation", "CI/CD"],
   },
@@ -53,26 +60,70 @@ const EXPERIENCE = [
     period: "Jan 2019 → Dec 2019",
     location: "San Jose, California",
     highlights: [
-      "Built a full-stack calendar plugin integrating with 8 email providers (Google, Microsoft, CalDAV)",
-      "Designed recurrence engine handling timezones, daylight savings, and offline SQLite storage",
+      "Built a full-stack calendar plugin integrating with 8 email providers (Google, Microsoft, CalDAV) used by 100k+ users",
+      "Designed a recurrence engine handling timezones, daylight savings, and offline SQLite storage",
       "Mentored fellow interns on React, Redux, and engineering best practices",
     ],
     tags: ["React", "Redux", "Calendar", "Full-Stack"],
   },
 ];
 
-const SKILLS = [
-  { label: "Backend Systems", level: 95 },
-  { label: "Product Thinking", level: 85 },
-  { label: "Cards / Payments", level: 90 },
-  { label: "Team Leadership", level: 80 },
-  { label: "React / Next.js", level: 75 },
-  { label: "Infrastructure & DevOps", level: 70 },
-  { label: "Pool / Billiards", level: 60 },
+const PROJECTS = [
+  {
+    title: "Bravos Research Investment Tracker",
+    description: "Full-stack investment tracking pipeline with paper trading, dashboard UI, and approval-gated order workflow. 20+ Python scripts covering ingestion → reconciliation → action queue → research briefs → performance → dashboard. Dual paper/live mode with kill switch, double approval, and daily spend guardrails.",
+    stack: ["Python", "React", "Next.js", "SQLite", "IBKR API", "Tailwind CSS"],
+    status: "Active — 18 tracked tickers, 7 paper positions, 42 automated tests",
+    link: "https://github.com/Lexzt/bravos-tracker",
+  },
+  {
+    title: "Personal AI Assistant (OpenClaw)",
+    description: "AI personal assistant running on a Mac mini, managing Gmail, calendar, investment alerts, and daily briefings via Telegram. Automated cron workflows for Bravos trade alerts, market-hour position syncing, and TP proximity monitoring. Built with guardrails: read-only first, approval-gated actions, no external writes without explicit consent.",
+    stack: ["OpenClaw", "TypeScript", "Python", "Telegram Bot API", "Tailscale"],
+    status: "Running 24/7 — managing investment pipeline, email, and calendar",
+    link: null,
+  },
+  {
+    title: "Friend Scheduling App (TableTime)",
+    description: "Group coordination app for friends to agree on dinner dates without the classic 'when are you free?' back-and-forth. Designed around group chat integration — because that's where the actual conversation happens. PRD complete, implementation paused while on sabbatical.",
+    stack: ["Next.js", "Tailwind CSS", "React"],
+    status: "PRD complete — building after honeymoon",
+    link: null,
+  },
+  {
+    title: "Homelab Infrastructure",
+    description: "Unraid NAS server (~60TB) running Emby, PhotoPrism, qBittorrent, Radarr/Sonarr with Docker networking. Connected via Tailscale tailnet for remote access. Designed for power-efficiency — doesn't run 24/7. Working on always-on Tailscale subnet router + JetKVM for remote power management.",
+    stack: ["Unraid", "Docker", "Tailscale", "UniFi", "JetKVM"],
+    status: "Operational — remote access improvements in progress",
+    link: null,
+  },
+];
+
+const SKILL_GROUPS = [
+  {
+    label: "Backend & Systems",
+    skills: ["Kotlin", "Java", "Python", "PostgreSQL", "Kafka", "gRPC", "REST APIs", "Microservices"],
+  },
+  {
+    label: "Frontend & Web",
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
+  },
+  {
+    label: "Infrastructure & DevOps",
+    skills: ["Docker", "Terraform", "CI/CD", "GitHub Actions", "AWS", "Cloud Run", "Tailscale"],
+  },
+  {
+    label: "Domain Expertise",
+    skills: ["Cards & Payments", "Compliance & Regulatory", "Product Strategy", "Team Leadership", "IBKR API"],
+  },
+  {
+    label: "AI & Automation",
+    skills: ["OpenClaw / AI Agents", "LLM Integration", "Browser Automation", "Gmail/Calendar APIs"],
+  },
 ];
 
 const INTERESTS = [
-  { emoji: "🎱", label: "Pool" },
+  { emoji: "🎱", label: "Pool / Billiards" },
   { emoji: "🏋️", label: "Gym" },
   { emoji: "🖥️", label: "Homelab" },
   { emoji: "🤖", label: "AI Agents" },
@@ -90,7 +141,7 @@ function Navbar() {
         <div className="flex gap-6 font-mono text-xs text-[var(--color-text-muted)]">
           <a href="#about" className="hover:text-[var(--color-accent)] transition-colors">about</a>
           <a href="#experience" className="hover:text-[var(--color-accent)] transition-colors">work</a>
-          <a href="#skills" className="hover:text-[var(--color-accent)] transition-colors">skills</a>
+          <a href="#projects" className="hover:text-[var(--color-accent)] transition-colors">projects</a>
           <a href="#connect" className="hover:text-[var(--color-accent)] transition-colors">connect</a>
         </div>
       </div>
@@ -101,7 +152,6 @@ function Navbar() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background blobs */}
       <div className="absolute top-1/4 -left-20 w-72 h-72 bg-[var(--color-accent)] rounded-full filter blur-[120px] opacity-10 animate-blob" />
       <div className="absolute bottom-1/4 -right-20 w-72 h-72 bg-[var(--color-accent-secondary)] rounded-full filter blur-[120px] opacity-10 animate-blob animation-delay-400" />
 
@@ -134,14 +184,13 @@ function Hero() {
             See my work →
           </a>
           <a
-            href="#connect"
+            href="#projects"
             className="px-6 py-3 border border-[var(--color-border)] text-[var(--color-text-muted)] font-mono text-sm rounded-lg hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-all"
           >
-            Get in touch
+            Projects →
           </a>
         </div>
 
-        {/* Terminal teaser */}
         <div className="mt-16 p-4 bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-lg max-w-md animate-fade-in-up animation-delay-800">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-3 h-3 rounded-full bg-red-500/60" />
@@ -251,23 +300,70 @@ function Experience() {
   );
 }
 
+function Projects() {
+  return (
+    <section id="projects" className="py-24 max-w-4xl mx-auto px-6">
+      <h2 className="font-mono text-sm text-[var(--color-accent)] tracking-wider mb-12">// projects</h2>
+      <div className="grid sm:grid-cols-2 gap-4">
+        {PROJECTS.map((project) => (
+          <div
+            key={project.title}
+            className="group p-6 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-lg card-hover flex flex-col"
+          >
+            <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+              {project.title}
+            </h3>
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 flex-1">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {project.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2 py-0.5 text-xs font-mono bg-[var(--color-bg-elevated)] text-[var(--color-text-muted)] rounded border border-[var(--color-border)]"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-[var(--color-text-muted)] font-mono">{project.status}</span>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[var(--color-accent)] font-mono hover:underline"
+                >
+                  View ↗
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Skills() {
   return (
     <section id="skills" className="py-24 max-w-4xl mx-auto px-6">
       <h2 className="font-mono text-sm text-[var(--color-accent)] tracking-wider mb-12">// skills & interests</h2>
       <div className="grid sm:grid-cols-2 gap-12">
-        <div className="space-y-4">
-          {SKILLS.map((skill) => (
-            <div key={skill.label}>
-              <div className="flex justify-between mb-1">
-                <span className="text-sm text-[var(--color-text)]">{skill.label}</span>
-                <span className="font-mono text-xs text-[var(--color-text-muted)]">{skill.level}%</span>
-              </div>
-              <div className="h-2 bg-[var(--color-bg-elevated)] rounded-full overflow-hidden">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-secondary)] transition-all duration-1000"
-                  style={{ width: `${skill.level}%` }}
-                />
+        <div className="space-y-6">
+          {SKILL_GROUPS.map((group) => (
+            <div key={group.label}>
+              <p className="font-mono text-xs text-[var(--color-accent-secondary)] mb-2">{group.label}</p>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-2.5 py-1 text-sm bg-[var(--color-bg-elevated)] text-[var(--color-text-muted)] rounded-lg border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
@@ -366,6 +462,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Projects />
         <Skills />
         <Connect />
         <Footer />
