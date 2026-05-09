@@ -7,21 +7,44 @@ const EXPERIENCE = [
     company: "Wise",
     period: "Oct 2023 → Present",
     location: "Singapore",
-    summary: "The work sits at the intersection of regulated fintech infrastructure, customer-facing product growth, operational reliability, and engineering leadership.",
-    highlights: [
-      "Led engineering across card ordering, availability, and fulfilment systems, helping Wise scale card issuance globally",
-      "Worked on manufacturing integrations between Wise systems and external card production and fulfilment partners",
-      "Built and maintained back-office tooling, alerting, and monitoring to support card operations, incident response, and production reliability",
-      "Owned PCI-sensitive card systems, including encryption/decryption flows for sensitive card data and support for multiple yearly compliance audits",
-      "Helped design a scalable approach for India's data-regulated card environment, balancing local regulatory requirements with Wise's global card platform",
-      "Supported card launches and expansion work across the US, India, Brazil, Malaysia, and other markets",
-      "Helped scale card capabilities across both consumer and business customer segments",
-      "Supported engineers leading Auto Top-up, live in Singapore and Great Britain, to improve the first customer experience and reduce friction when customers start using Wise cards",
-      "Supported engineers leading Bill Split, a product initiative aimed at increasing card adoption and card spend by creating more everyday reasons to use the Wise card",
-      "Partnered with product and analytics to define team KPIs, understand adoption drivers, and align engineering priorities with measurable customer and business outcomes",
-      "Grew engineers by coaching them through RFC writing, technical ownership, stakeholder alignment, global approvals, and promotion growth",
-      "Built a team culture where engineers closest to the systems have a real voice in technical direction, system health, and what needs to improve",
-      "Represented the team's technical direction to leadership, maintaining accountability across delivery, compliance, reliability, and product outcomes",
+    summary: "I lead engineering for Wise's card adoption and early customer experience domain. My team owns systems across card ordering, card availability, manufacturing integrations, PCI-sensitive card data handling, market expansion, and product growth initiatives for both consumer and business customers.",
+    subtitle: "This is a high-trust fintech domain where backend reliability, compliance, operational readiness, customer experience, and product growth all have to work together.",
+    areas: [
+      {
+        title: "Global card platform",
+        bullets: [
+          "I work on the systems that allow Wise to scale cards globally, including card ordering, availability, fulfilment, manufacturing integrations, back-office tooling, alerting, monitoring, and incident management",
+        ],
+      },
+      {
+        title: "Regulated card systems",
+        bullets: [
+          "I own PCI-sensitive card systems, including encryption and decryption flows for sensitive card data, and support multiple yearly compliance audit cycles",
+          "For India, I helped shape a scalable approach for operating card systems in a data-regulated environment, balancing local regulatory requirements with Wise's global platform model",
+        ],
+      },
+      {
+        title: "Market expansion",
+        bullets: [
+          "I support Wise card launches and expansion work across markets including the US, India, Brazil, Malaysia, and others",
+          "This work supports both consumer and business customers, helping Wise scale card availability across different customer segments and regulatory environments",
+        ],
+      },
+      {
+        title: "Product growth",
+        bullets: [
+          "I supported engineers leading Auto Top-up and Bill Split, two initiatives aimed at improving first customer experience and increasing meaningful card adoption",
+          "My role was to provide technical direction, unblock delivery, help navigate stakeholders, and grow the engineers leading the work",
+        ],
+      },
+      {
+        title: "Engineering leadership",
+        bullets: [
+          "I coach engineers through RFC writing, technical ownership, stakeholder alignment, global approvals, and promotion growth",
+          "I believe engineers closest to the systems should have a real voice in technical direction, because they often understand best what needs to improve",
+          "My role is to create the environment, context, and accountability for engineers to turn that ground-level knowledge into clear proposals, better systems, and successful delivery",
+        ],
+      },
     ],
     tags: ["Engineering Leadership", "Cards", "PCI Compliance", "Market Expansion", "Product Growth"],
   },
@@ -230,11 +253,10 @@ function About() {
       <div className="grid sm:grid-cols-2 gap-12">
         <div>
           <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
-            At Wise, I lead engineering in a cards domain where product growth, compliance, operational reliability, and customer trust are deeply connected.
+            Engineering Lead at Wise, working on Cards &amp; Spend Adoption. My team works on the systems that help customers order cards, access card details securely, launch cards across new markets, and adopt card products through initiatives like Auto Top-up and Bill Split.
           </p>
           <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
-            I care about building things that have measurable impact. Not busywork. Not vanity metrics. 
-            Real user-facing outcomes that move numbers.
+            A large part of my role is scaling delivery through people — working with engineers to shape RFCs, lead global approval processes, own complex initiatives, and grow into stronger technical leaders.
           </p>
           <p className="text-[var(--color-text-muted)] leading-relaxed">
             Outside work: I&apos;m into pool, AI/tech rabbit holes, optimizing every financial product I touch, 
@@ -287,16 +309,38 @@ function Experience() {
             </div>
 
             {exp.summary && (
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 italic">{exp.summary}</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">{exp.summary}</p>
+            )}
+            {exp.subtitle && (
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 italic">{exp.subtitle}</p>
             )}
 
-            <ul className="space-y-1.5 mb-4">
-              {exp.highlights.map((h, j) => (
-                <li key={j} className="text-sm text-[var(--color-text-muted)] pl-4 border-l-2 border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
-                  {h}
-                </li>
-              ))}
-            </ul>
+            {exp.areas && (
+              <div className="space-y-4 mb-4">
+                {exp.areas.map((area) => (
+                  <div key={area.title}>
+                    <h4 className="font-mono text-xs text-[var(--color-accent-secondary)] tracking-wider mb-2">{area.title}</h4>
+                    <ul className="space-y-1.5">
+                      {area.bullets.map((b, j) => (
+                        <li key={j} className="text-sm text-[var(--color-text-muted)] pl-4 border-l-2 border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {exp.highlights && (
+              <ul className="space-y-1.5 mb-4">
+                {exp.highlights.map((h, j) => (
+                  <li key={j} className="text-sm text-[var(--color-text-muted)] pl-4 border-l-2 border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            )}
 
             <div className="flex flex-wrap gap-2">
               {exp.tags.map((tag) => (
@@ -310,45 +354,6 @@ function Experience() {
             </div>
           </div>
         ))}
-      </div>
-    </section>
-  );
-}
-
-function LeadershipPhilosophy() {
-  return (
-    <section className="py-24 max-w-4xl mx-auto px-6">
-      <h2 className="font-mono text-sm text-[var(--color-accent)] tracking-wider mb-8">// leadership philosophy</h2>
-      <div className="max-w-2xl">
-        <p className="text-[var(--color-text)] leading-relaxed mb-4 text-lg">
-          I believe strong engineering teams are built when engineers are trusted to be more than executors.
-        </p>
-        <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
-          The engineers closest to the system often understand its risks, tradeoffs, and improvement areas better than anyone else. My role as a lead is to create an environment where that knowledge is surfaced early, discussed honestly, and turned into meaningful action.
-        </p>
-        <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
-          I want engineers on my team to feel safe challenging assumptions, raising technical concerns, proposing improvements, and shaping the systems they own. Leadership should provide context, direction, and accountability — but it should not be the only source of technical priorities.
-        </p>
-        <p className="text-[var(--color-text-muted)] leading-relaxed mb-8">
-          A fully functioning team is one where engineers understand the business goals, care about customer impact, and have enough ownership to say: <span className="text-[var(--color-text)] italic">&ldquo;This is what the system needs, and this is why it matters.&rdquo;</span>
-        </p>
-        <div className="grid sm:grid-cols-2 gap-3">
-          {[
-            "Giving engineers ownership of meaningful initiatives, not just implementation tasks",
-            "Coaching engineers through RFCs, technical proposals, stakeholder alignment, and global approvals",
-            "Encouraging open discussion about system health, technical debt, operational risks, and long-term maintainability",
-            "Creating space for engineers to disagree constructively and influence team priorities",
-            "Helping engineers connect their technical judgement to product outcomes, reliability, compliance, and customer impact",
-            "Supporting promotions by helping engineers make their impact visible and repeatable",
-          ].map((item) => (
-            <div key={item} className="p-3 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-lg">
-              <p className="text-sm text-[var(--color-text-muted)]">{item}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-[var(--color-text)] leading-relaxed mt-6">
-          My goal is to build teams that can ship well without depending on one person to drive everything.
-        </p>
       </div>
     </section>
   );
@@ -516,7 +521,6 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <LeadershipPhilosophy />
         <Projects />
         <Skills />
         <Connect />
