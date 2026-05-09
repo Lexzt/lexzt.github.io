@@ -104,9 +104,17 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     title: "SignalForge",
-    description: "Signal aggregation platform for investment research — currently ingests Bravos Research trade alerts and supports paper trading via IBKR. Pipeline scripts handle market price refreshes, position reconciliation, action queue generation, and TP proximity monitoring. Dashboard with order basket view, P&L charting, and alert timeline served over Tailscale. Built with guardrails: dual paper/live mode, kill switch, double approval, and 42 automated guardrail tests.",
-    stack: ["Python", "React", "Next.js", "SQLite", "IBKR API", "Tailwind CSS"],
-    status: "Active — 18 tracked tickers, 7 paper positions, 42 automated tests",
+    description: "A personal trading research and execution system for tracking market signals, investment ideas, paper trades, portfolio exposure, and eventually live trading decisions. Built with OpenClaw-assisted workflows, the system is designed around dashboards, audit trails, decision records, and repeatable trading processes — moving beyond ad-hoc investing by creating a structured environment for testing ideas, reviewing outcomes, and supporting real-money decisions with better context and discipline.",
+    areas: [
+      { title: "Decision records", detail: "Structured logs for trade ideas, investment theses, assumptions, and changes in conviction" },
+      { title: "Signal tracking", detail: "Multiple data points tracked over time to support or invalidate trade ideas" },
+      { title: "Paper trading", detail: "Simulated positions and portfolio performance before committing real capital" },
+      { title: "Live trading foundation", detail: "Data and workflow design intended to support eventual production use" },
+      { title: "Audit trail", detail: "Clear history of why decisions were made, what changed, and how outcomes compared against expectations" },
+      { title: "AI-assisted research", detail: "OpenClaw workflows for summarising context, exploring ideas, and supporting repeatable review processes" },
+    ],
+    stack: ["Trading Systems", "Dashboards", "Audit Trails", "Paper Trading", "Live Trading", "OpenClaw", "AI Workflows"],
+    status: "Active — 18 tracked tickers, 7 paper positions, 42 automated guardrail tests",
     link: "https://github.com/Lexzt/signal-forge",
   },
   {
@@ -372,9 +380,19 @@ function Projects() {
             <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
               {project.title}
             </h3>
-            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 flex-1">
+            <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3 flex-1">
               {project.description}
             </p>
+            {project.areas && (
+              <div className="space-y-1.5 mb-3">
+                {project.areas.map((area) => (
+                  <div key={area.title} className="text-sm">
+                    <span className="font-mono text-xs text-[var(--color-accent-secondary)]">{area.title}</span>
+                    <span className="text-[var(--color-text-muted)]"> — {area.detail}</span>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="flex flex-wrap gap-1.5 mb-3">
               {project.stack.map((tech) => (
                 <span
