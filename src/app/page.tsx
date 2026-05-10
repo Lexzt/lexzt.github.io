@@ -169,6 +169,8 @@ function Navbar() {
           <a href="#about" className="hover:text-[var(--color-accent)] transition-colors">about</a>
           <a href="#experience" className="hover:text-[var(--color-accent)] transition-colors">work</a>
           <a href="#projects" className="hover:text-[var(--color-accent)] transition-colors">projects</a>
+          <Link href="/resume" className="hover:text-[var(--color-accent)] transition-colors">resume</Link>
+          <Link href="/blog" className="hover:text-[var(--color-accent)] transition-colors">blog</Link>
           <a href="#connect" className="hover:text-[var(--color-accent)] transition-colors">connect</a>
         </div>
       </div>
